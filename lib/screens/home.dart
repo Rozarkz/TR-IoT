@@ -74,17 +74,32 @@ class _VitalDataScreenState extends State<VitalDataScreen> {
         ],
       ),
       body: Center(
-        child: Column(
+        child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              'Heart Rate: $_bpm bpm',
-              style: const TextStyle(fontSize: 24),
+            Container(
+              margin: const EdgeInsets.only(
+                top: 30,
+                bottom: 20,
+                left: 20,
+                right: 20,
+              ),
+              width: 100,
+              child: Image.asset('assets/images/health.png'),
             ),
-            const SizedBox(height: 16),
-            Text(
-              'SpO2: $_spo2%',
-              style: const TextStyle(fontSize: 24),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'Heart Rate: $_bpm bpm',
+                  style: const TextStyle(fontSize: 24),
+                ),
+                const SizedBox(height: 16),
+                Text(
+                  'SpO2: $_spo2%',
+                  style: const TextStyle(fontSize: 24),
+                 ),
+              ],
             ),
           ],
         ),
