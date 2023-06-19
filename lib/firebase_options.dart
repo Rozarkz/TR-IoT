@@ -44,46 +44,44 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyA22a_62I-GWqgLzyLPIHvmCtjM6Wkw0q4',
-    appId: '1:810673216241:web:0ab6a09c6b3fa5fed3e750',
-    messagingSenderId: '810673216241',
-    projectId: 'labp-b8167',
-    authDomain: 'labp-b8167.firebaseapp.com',
-    databaseURL:
-        'https://labp-b8167-default-rtdb.asia-southeast1.firebasedatabase.app',
-    storageBucket: 'labp-b8167.appspot.com',
-    measurementId: 'G-PK49CR7HG2',
+    apiKey: 'AIzaSyChzoj8rsnEjWeiUeBNyzTw3-G1joZkJM8',
+    appId: '1:497208742299:web:7dd203ba9349c4c6bd113e',
+    messagingSenderId: '497208742299',
+    projectId: 'lortbims',
+    authDomain: 'lortbims.firebaseapp.com',
+    databaseURL: 'https://lortbims-default-rtdb.asia-southeast1.firebasedatabase.app',
+    storageBucket: 'lortbims.appspot.com',
+    measurementId: 'G-0Q9SGWHL82',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyA1x6R8A0GXFTxORYYHz0J8L5rGc4FYnqo',
-    appId: '1:810673216241:android:fd9901fe0ad6fcd5d3e750',
-    messagingSenderId: '810673216241',
-    projectId: 'labp-b8167',
-    databaseURL:
-        'https://labp-b8167-default-rtdb.asia-southeast1.firebasedatabase.app',
-    storageBucket: 'labp-b8167.appspot.com',
+    apiKey: 'AIzaSyBCg9aqDvpxJ8Fv_q71jv5i3TpTOss6g5g',
+    appId: '1:497208742299:android:48432454e9054362bd113e',
+    messagingSenderId: '497208742299',
+    projectId: 'lortbims',
+    databaseURL: 'https://lortbims-default-rtdb.asia-southeast1.firebasedatabase.app',
+    storageBucket: 'lortbims.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyB__BRzpNe0iXu6PK2grKJICxaLARsoNRI',
-    appId: '1:810673216241:ios:e930be05f06921bdd3e750',
-    messagingSenderId: '810673216241',
-    projectId: 'labp-b8167',
-    databaseURL:
-        'https://labp-b8167-default-rtdb.asia-southeast1.firebasedatabase.app',
-    storageBucket: 'labp-b8167.appspot.com',
-    iosBundleId: 'com.example.trIot',
+    apiKey: 'AIzaSyB2wvLjv6BPdh62jXuy1OjEwL5wa4jPERs',
+    appId: '1:497208742299:ios:3768189e15fce1a8bd113e',
+    messagingSenderId: '497208742299',
+    projectId: 'lortbims',
+    databaseURL: 'https://lortbims-default-rtdb.asia-southeast1.firebasedatabase.app',
+    storageBucket: 'lortbims.appspot.com',
+    iosClientId: '497208742299-fj36mojfbgo8t4frm9ql8hkpepifnulp.apps.googleusercontent.com',
+    iosBundleId: 'com.example.flutter14ChatApp',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyB__BRzpNe0iXu6PK2grKJICxaLARsoNRI',
-    appId: '1:810673216241:ios:e930be05f06921bdd3e750',
-    messagingSenderId: '810673216241',
-    projectId: 'labp-b8167',
-    databaseURL:
-        'https://labp-b8167-default-rtdb.asia-southeast1.firebasedatabase.app',
-    storageBucket: 'labp-b8167.appspot.com',
-    iosBundleId: 'com.example.trIot',
+    apiKey: 'AIzaSyB2wvLjv6BPdh62jXuy1OjEwL5wa4jPERs',
+    appId: '1:497208742299:ios:3768189e15fce1a8bd113e',
+    messagingSenderId: '497208742299',
+    projectId: 'lortbims',
+    databaseURL: 'https://lortbims-default-rtdb.asia-southeast1.firebasedatabase.app',
+    storageBucket: 'lortbims.appspot.com',
+    iosClientId: '497208742299-fj36mojfbgo8t4frm9ql8hkpepifnulp.apps.googleusercontent.com',
+    iosBundleId: 'com.example.flutter14ChatApp',
   );
 }

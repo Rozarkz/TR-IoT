@@ -2,10 +2,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-
-void main() {
-  runApp(const MyApp());
-}
+import 'dart:async';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -33,26 +30,39 @@ class VitalDataScreen extends StatefulWidget {
 class _VitalDataScreenState extends State<VitalDataScreen> {
   double _bpm = 0;
   double _spo2 = 0;
+  Timer? _timer;
 
   @override
   void initState() {
     super.initState();
-    _fetchData();
+    _startFetchingData();
+  }
+
+  void _startFetchingData() {
+    _timer = Timer.periodic(Duration(seconds: 1), (Timer timer) {
+      _fetchData();
+    });
   }
 
   Future<void> _fetchData() async {
     final response = await http.get(Uri.parse(
-        'https://labp-b8167-default-rtdb.asia-southeast1.firebasedatabase.app/.json'));
+        'https://lortbims-default-rtdb.asia-southeast1.firebasedatabase.app/data.json'));
 
     if (response.statusCode == 200) {
       final jsonData = json.decode(response.body);
       setState(() {
-        _bpm = double.parse(jsonData['HeartRate'].toString());
+        _bpm = double.parse(jsonData['BPM'].toString());
         _spo2 = double.parse(jsonData['SpO2'].toString());
       });
     } else {
       throw Exception('Failed to fetch data');
     }
+  }
+
+  @override
+  void dispose() {
+    _timer?.cancel();
+    super.dispose();
   }
 
   @override
@@ -98,7 +108,7 @@ class _VitalDataScreenState extends State<VitalDataScreen> {
                 Text(
                   'SpO2: $_spo2%',
                   style: const TextStyle(fontSize: 24),
-                 ),
+                ),
               ],
             ),
           ],
